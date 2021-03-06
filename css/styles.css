@@ -103,6 +103,33 @@ a
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
+/* Hobbies */
+
+.hobbies
+{
+  font-size: 30px;
+  text-align: center;
+}
+
+.hobbies div
+{
+  margin-top: 100px;
+  animation-name: categoryanimation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+.hobbies a
+{
+  font-size: 90px;
+}
+
+.hobbies a:hover
+{
+  outline-style: dotted;
+  opacity: 0.7;
+}
 
 /* Currículo*/
 .resume
@@ -167,11 +194,51 @@ a
   animation-duration: 1s;
 }
 
+/* Músicas */
+.contentdiv div
+{
+  display: inline-block;
+}
+
+.spotify
+{
+  width: 30%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.videos
+{
+  display: table;
+  animation-name: ttanimation;
+  animation-duration: 2s;
+  text-align: center;
+  vertical-align: top;
+  padding-top: 50px;
+  width: 69%;
+}
+
+.songs_covers
+{
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background-size: contain;
+
+}
+
+.songs_covers:hover
+{
+  filter: blur(1px);
+}
+
 /* Exibir os filmes*/
 .movies
 {
   text-align: center;
   display: table;
+  animation-name: ttanimation;
+  animation-duration: 2s;
 }
 
 .movies p
@@ -335,6 +402,19 @@ a
     opacity: 1;
   }
 }
+
+@keyframes categoryanimation {
+  0%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(0px,-5px);
+  }
+  100%{
+    transform: translate(0px, 0px);
+  }
+}
+
 @media (max-width: 700px) {
 .name
 {
