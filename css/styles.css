@@ -87,6 +87,7 @@ a
 
 .picture
 {
+  max-width: 100%;
   width: 400px;
   margin-top: 120px;
   border-radius: 600px;
@@ -99,7 +100,7 @@ a
 .name
 {
   font-size: 20px;
-  width: 59%;
+  width: 49%;
   vertical-align: top;
   margin-top: 250px;
   text-align: center;
@@ -122,6 +123,7 @@ a
 
 .brick
 {
+  position: absolute;
   width: 30px;
 }
 
@@ -132,17 +134,20 @@ a
 
 .brick:nth-of-type(1)
 {
-  transform: translate(505px,-100px);
+  top: 549px;
+  left: 420px;
 }
 
 .brick:nth-of-type(2)
 {
-  transform: translate(520px,-100px);
+  top: 549px;
+  left: 479px;
 }
 
 .brick:nth-of-type(3)
 {
-  transform: translate(300px,-100px);
+  top: 549px;
+  left: 300px;
 }
 
 .cloud:nth-of-type(n+1)
@@ -364,6 +369,9 @@ a
 
 .block
 {
+  position: absolute;
+  top: 549px;
+  left: 440px;
   width: 30px;
   animation-name: blockanimation;
   animation-delay: 4.5s;
@@ -375,11 +383,11 @@ a
 .mario
 {
   width: 30px;
-  transform: translate(-800px,150px);
+  position: absolute;
   animation-name: marioanimation;
   animation-delay: 3s;
   animation-duration: 3s;
-  animation-fill-mode: backwards;
+  animation-fill-mode: both;
   animation-timing-function: linear;
 }
 
@@ -431,23 +439,29 @@ a
 
 @keyframes marioanimation {
   0%{
-    transform: translate(-800px,150px);
+    top: 700px;
+    left: -30px;
   }
   50%{
-    transform: translate(-40px,150px);
+    top: 700px;
+    left: 445px;
   }
   55%{
-    transform: translate(-40px,50px);
+    top: 580px;
+    left: 445px;
   }
   60%{
-    transform: translate(-40px,150px );
+    top: 700px;
+    left: 445px;
   }
   75%{
-    transform: translate(200px,150px );
+    top: 700px;
+    left: 900px;
   }
   100%{
+    top: 700px;
+    left: 90%;
     visibility: hidden;
-    transform: translate(1200px,150px);
   }
 }
 
@@ -496,6 +510,7 @@ a
     transform: translate(1200px,-150px);
   }
 }
+
 @media (max-width: 700px) {
 .navigation li
 {
