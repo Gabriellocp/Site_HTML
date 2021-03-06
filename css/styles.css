@@ -1,0 +1,386 @@
+/* Configs Gerais*/
+html,body
+{
+  margin: 0px;
+  padding: 0px;
+  background-color: #05263B;
+  color: #BBC8DE;
+  font-family: 'Press Start 2P', cursive;
+  font-variant-caps: all-small-caps;
+}
+
+a
+{
+  text-decoration: none;
+  color: #BBC8DE;
+  outline: none;
+}
+/* Caminho */
+.path
+{
+  color: #BBC8DE;
+  font-size: 10px;
+  text-align: left;
+}
+.path ul
+{
+  list-style: none;
+}
+.path li
+{
+  display: inline-block;
+}
+/* Menu superior*/
+.navigation
+{
+  top: 0px;
+  background-color: #192E41;
+  height: 70px;
+  font-size: 15px;
+}
+
+.navigation ul
+{
+  margin-top: 0px;
+  list-style: none;
+  padding: 0px;
+  height: 70px;
+  text-align: center;
+}
+
+.navigation li
+{
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 70px;
+}
+.navigation li.menu
+{
+  display: none;
+}
+/* Infos página inicial*/
+.info div
+{
+  display: inline-block;
+}
+
+.divpic
+{
+  width: 40%;
+}
+
+.picture
+{
+  width: 400px;
+  margin-top: 120px;
+  border-radius: 600px;
+  animation-name: picanimation;
+  animation-fill-mode: backwards;
+  animation-delay: 4.5s;
+  animation-duration: 3s;
+}
+
+.name
+{
+  font-size: 20px;
+  width: 59%;
+  vertical-align: top;
+  margin-top: 250px;
+  text-align: center;
+}
+
+.name h2
+{
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.name h1,.name h2
+{
+  animation-name: nameanimation;
+  animation-delay: 4.5s;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+}
+
+/* Currículo*/
+.resume
+{
+  font-family: 'Domine', serif;
+  padding: 20px 100px 120px 120px;
+}
+.resume h1
+{
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+
+.resume h3
+{
+  font-size: 20px;
+  line-height: 10px;
+  color: #D4F1F4;
+
+}
+
+.resume p
+{
+  font-size: 24px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.cv_info ul
+{
+  padding: 0px;
+}
+
+.cv_info li
+{
+  list-style: none;
+  display: inline-block;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.cv_info h2,h3,hr
+{
+  animation-name: ttanimation;
+  animation-duration: 1s;
+}
+
+.cv_info p
+{
+  animation-name: textanimation;
+  animation-duration: 2s;
+}
+
+.profilepic
+{
+  float: right;
+  margin-top: 100px;
+  margin-right: 300px;
+  border-radius: 150px;
+  width: 250px;
+  animation-name: ttanimation;
+  animation-duration: 1s;
+}
+
+/* Exibir os filmes*/
+.movies
+{
+  text-align: center;
+  display: table;
+}
+
+.movies p
+{
+  padding: 30px;
+}
+
+.movie_name
+{
+  font-family: 'Domine', serif;
+  color: #FFFFFF;
+  font-size: 16px;
+  text-align: center;
+  visibility: hidden;
+  transform: translate(0px,-250px);
+}
+
+.super
+{
+  width: 300px;
+  height: 400px;
+  display: table-cell; /* Igualar a altura dos textos*/
+
+}
+
+.super:hover .movie_name
+{
+  visibility: visible;
+}
+
+.movies_covers
+{
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  background-size: contain;
+}
+
+.movies_covers:hover
+{
+  filter: blur(2px);
+}
+
+/* Animações página inicial*/
+.coin
+{
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+.block
+{
+  width: 30px;
+
+  animation-name: blockanimation;
+  animation-delay: 4.5s;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.mario
+{
+  width: 30px;
+  transform: translate(-800px,150px);
+  animation-name: marioanimation;
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-timing-function: linear;
+}
+
+.navigation a:hover img
+{
+  opacity: 1;
+}
+/* Animações*/
+@keyframes picanimation {
+  0%{
+    opacity: 0;
+    transform: translate(0px,0px);
+  }
+  50%{
+    opacity: 1;
+    transform: translate(0px,-100px);
+  }
+  100%{
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes nameanimation {
+  0%{
+    opacity: 0;
+    transform: translate(0px,0px);
+  }
+  50%{
+    opacity: 1;
+    transform: translate(0px,-75px);
+  }
+  100%{
+    transform: translate(0px,0px);
+  }
+}
+
+
+@keyframes blockanimation {
+  0%{
+    transform: translate(10px,0px);
+  }
+  50%{
+    transform: translate(10px,-30px);
+  }
+  100%{
+    transform: translate(10px,0px);
+  }
+}
+
+@keyframes marioanimation {
+  0%{
+    transform: translate(-800px,150px);
+  }
+  50%{
+    transform: translate(-40px,150px);
+  }
+  55%{
+    transform: translate(-40px,50px);
+  }
+  60%{
+    transform: translate(-40px,150px );
+  }
+  75%{
+    transform: translate(200px,150px );
+  }
+  100%{
+    visibility: hidden;
+    transform: translate(1200px,150px);
+  }
+}
+
+@keyframes ttanimation {
+  0%{
+    opacity: 0;
+    transform: translate(-80px,0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes textanimation {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+.name
+{
+  width: 100%;
+}
+
+.divpic
+{
+  width: 100%;
+}
+
+.picture
+{
+  width: 400px;
+  object-fit: cover;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 80px;
+  border-radius: 600px;
+  animation-name: picanimation;
+  animation-fill-mode: backwards;
+  animation-delay: 4.5s;
+  animation-duration: 3s;
+}
+
+.profilepic
+{
+  float:right;
+  margin-top:0px;
+  border-radius: 150px;
+  animation-name: cvanimation;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+}
+
+
+@keyframes cvanimation {
+  0%{
+    opacity: 0;
+    transform: translate(200px,0px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(250px,0px);
+  }
+}
+
+
+}
