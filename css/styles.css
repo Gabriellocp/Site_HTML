@@ -443,7 +443,7 @@ a
   margin: 50px;
 }
 
-.games  > div
+.games > div
 {
   display: inline-block;
   overflow: hidden;
@@ -460,6 +460,7 @@ a
   width: 100%;
   height: 20%;
   bottom: 0;
+  text-align: center;
   position: absolute;
   border-radius: 20px;
   background-color: black;
@@ -476,8 +477,8 @@ a
 .gamecover img
 {
   position: absolute;
-  left: 45%;
-  top: 10px;
+  margin-left: -15px;
+  margin-top: 10px;
   opacity: 0.5;
   width: 30px;
 }
