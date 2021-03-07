@@ -13,11 +13,12 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+      <script type="text/javascript" src="js/script.js"></script>
   </head>
 
   <body>
 
-    <div class="navigation">
+    <div id="navigation" class="navigation">
 
       <ul>
         <li> <a href="index.html"> <img class="coin" src="img/coin.gif"> Home </a> </li>
@@ -29,7 +30,7 @@
           </ul>
         </li>
         <li> <a href="curriculum.html"> <img class="coin" src="img/coin.gif"> Curriculo </a> </li>
-        <li class="menu"> &#9776; </li>
+        <li id="menu" class="menu" onclick="openMenu()"> &#9776; </li>
       </ul>
 
     </div>
@@ -47,12 +48,12 @@
         <img class="brick" src="img/brick.png">
         <img class="brick" src="img/brick.png">
         <img class="brick" src="img/block.gif">
-        <div class="sky">
+
         <img class="cloud" src="img/cloud.png">
         <img class="cloud" src="img/cloud.png">
         <img class="cloud" src="img/cloud.png">
         <img class="cloud" src="img/cloud.png">
-        </div>
+
         <img class="block" src="img/block.gif" title="?">
         <img class="mario" src="img/mario.gif">
         <h1> Gabriel Orlando </h1>
@@ -62,11 +63,12 @@
 
       <div class="divpic">
         <img class="picture" src="img/8bitphoto.png" alt="Main page photo">
-        <img class="pipe" src="img/pipe.png">
       </div>
     </div>
     <div style="background-image: url('img/ground.png')"class="ground">
+      <img class="pipe" src="img/pipe.png">
     </div>
+
     <div class="footer">
       <a href="https://www.linkedin.com/in/gabriel-orlando-51b276204/" target="_blank">
         <img class="icon" src="img/linkedin.png">

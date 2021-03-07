@@ -59,13 +59,15 @@ a
   display: none;
   align-items: center;
   position: absolute;
-  right: 0;
+  right: 0px
 }
 
 .dropdown li
 {
+  background-color: #192E41;
   width: 120px;
   height: 25px;
+  left: 12px;
   font-size: 12px;
   border: 3px solid;
   border-radius: 100px;
@@ -78,7 +80,8 @@ a
 
 .dropdown li:hover
 {
-  background-color: #0D1440 ;
+  background-color: #5DCAD1;
+  color: #FFFFFF;
 }
 .navigation li.menu
 {
@@ -88,7 +91,7 @@ a
 .info
 {
   background-color: #0D659D;
-  width: 100%;
+  width: 100vw;
   height: 650px;
 }
 
@@ -101,7 +104,7 @@ a
 {
   display: inline-block;
 
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background-size: contain;
 
@@ -155,10 +158,10 @@ a
 
 .pipe
 {
-  position: absolute;
-  margin-top: 560px;
-  margin-left: 220px;
+  position: relative;
   width: 200px;
+  left: calc(100vw - 160px);
+  bottom: 80px;
   transform: rotate(270deg);
 }
 
@@ -320,7 +323,7 @@ a
   text-align: center;
 }
 
-.videos
+.songs
 {
   display: table;
   animation-name: ttanimation;
@@ -352,7 +355,7 @@ a
   background-color: yellow;
 }
 
-.videos:hover + .play
+.songs:hover + .play
 {
   background-color: blue;
 
@@ -360,6 +363,7 @@ a
 /* Exibir os filmes*/
 .movies
 {
+  margin: 30px;
   border-bottom: 4px solid;
   text-align: center;
   display: table;
@@ -416,6 +420,74 @@ a
   display:block;
 }
 
+/* Página de games */
+.gamediv h1
+{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gamediv p
+{
+  font-family: 'Domine', serif;
+  margin-left: 60px;
+  font-size: 20px;
+  text-align: left;
+  animation-name: textanimation;
+  animation-duration: .5s;
+}
+
+.games
+{
+  margin-top: 100px;
+  margin: 50px;
+}
+
+.games  > div
+{
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 30px;
+  position: relative;
+  width: 200px;
+  height: 250px;
+  background-size: 100% 100%;
+  border-radius: 20px;
+}
+
+.gamecover
+{
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  position: absolute;
+  border-radius: 20px;
+  background-color: black;
+  opacity: 0;
+}
+
+.games div:hover .gamecover
+{
+  opacity: 0.8;
+  animation-name: downtop;
+  animation-duration: .6s;
+}
+
+.gamecover img
+{
+  position: absolute;
+  left: 45%;
+  top: 10px;
+  opacity: 0.5;
+  width: 30px;
+}
+
+.gamecover img:hover
+{
+  opacity: 1;
+}
+
+
 /* Animações página inicial*/
 .coin
 {
@@ -453,6 +525,15 @@ a
   opacity: 1;
 }
 /* Animações*/
+@keyframes downtop {
+  0%{
+    bottom: -20px;
+  }
+  100%{
+    bottom: 0px;
+  }
+}
+
 @keyframes picanimation {
   0%{
     opacity: 0;
@@ -517,7 +598,7 @@ a
   }
   100%{
     top: 700px;
-    left: 90%;
+    left: 95%;
     visibility: hidden;
   }
 }
@@ -559,17 +640,18 @@ a
 
 @keyframes cloudanimation1 {
   100%{
-    transform: translate(1000px,-230px);
+    transform: translate(70vw,-230px);
   }
 }
+
 @keyframes cloudanimation2 {
   100%{
-    transform: translate(1000px,-150px);
+    transform: translate(65vw,-150px);
   }
 }
 
 @media (max-width: 700px) {
-.navigation li
+.navigation ul li
 {
   display: none;
 }
@@ -577,10 +659,18 @@ a
 .navigation ul
 {
   text-align: right;
+  margin-right: 30px;
 }
 .navigation li.menu
 {
+  font-size: 30px;
   display: inline-block;
+}
+
+.navigation .menu:hover
+{
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .profilepic
@@ -594,16 +684,64 @@ a
   animation-duration: 1s;
 }
 
-
 @keyframes cvanimation {
   0%{
     opacity: 0;
   }
   100%{
     opacity: 1;
-
   }
 }
 
+.menujs
+{
+  height: auto;
+}
+
+.menujs ul
+{
+  height: auto;
+  text-align: center;
+
+}
+
+.menujs ul li
+{
+  padding-bottom: 2px;
+  text-align: center;
+  width: auto;
+  display: block;
+}
+
+.menujs ul li img
+{
+  display: none;
+}
+
+.menujs a:hover
+{
+  color: #FFFFFF;
+}
+
+.menujs .menu:hover
+{
+
+  color: #FFFFFF;
+}
+
+.menujs li:hover ul
+{
+  display: none;
+}
+
+.spotify
+{
+  width: 100%;
+}
+
+.songs
+{
+  width: 100%;
+}
 
 }

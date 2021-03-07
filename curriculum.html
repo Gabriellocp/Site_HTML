@@ -16,16 +16,24 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
 
+      <script type="text/javascript" src="js/script.js"></script>
   </head>
 
   <body>
 
-    <div class="navigation">
+    <div id="navigation" class="navigation">
 
       <ul>
         <li> <a href="index.html"> <img class="coin" src="img/coin.gif"> Home </a> </li>
-        <li> <a href="hobbies.html"> <img class="coin" src="img/coin.gif"> Hobbies </a> </li>
+        <li> <a href="hobbies.html"> <img class="coin" src="img/coin.gif"> Hobbies </a>
+          <ul class="dropdown">
+            <a href="movies.html"> <li> Filmes </li> </a>
+            <a href="games.html"> <li> Jogos </li> </a>
+            <a href="songs.html"> <li> Músicas </li> </a>
+          </ul>
+        </li>
         <li> <a href="curriculum.html"> <img class="coin" src="img/coin.gif"> Curriculo </a> </li>
+        <li id="menu" class="menu" onclick="openMenu()"> &#9776; </li>
       </ul>
 
     </div>
@@ -37,7 +45,7 @@
       <ul>
         <li> Home </li>
         <li> ... </li>
-        <li> Curriculo </li>
+        <li> Currículo </li>
       </ul>
 
     </div>

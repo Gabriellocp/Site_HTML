@@ -4,7 +4,7 @@
 
   <head>
 
-      <title> HOME </title>
+      <title> MÚSICAS </title>
 
       <meta charset="utf-8">
 
@@ -13,16 +13,24 @@
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+      <script type="text/javascript" src="js/script.js"></script>
   </head>
 
   <body>
 
-    <div class="navigation">
+    <div id="navigation" class="navigation">
 
       <ul>
         <li> <a href="index.html"> <img class="coin" src="img/coin.gif"> Home </a> </li>
-        <li> <a href="hobbies.html"> <img class="coin" src="img/coin.gif"> Hobbies </a> </li>
+        <li> <a href="hobbies.html"> <img class="coin" src="img/coin.gif"> Hobbies </a>
+          <ul class="dropdown">
+            <a href="movies.html"> <li> Filmes </li> </a>
+            <a href="games.html"> <li> Jogos </li> </a>
+            <a href="songs.html"> <li> Músicas </li> </a>
+          </ul>
+        </li>
         <li> <a href="curriculum.html"> <img class="coin" src="img/coin.gif"> Curriculo </a> </li>
+        <li id="menu" class="menu" onclick="openMenu()"> &#9776; </li>
       </ul>
 
     </div>
@@ -45,21 +53,28 @@
         <iframe src="https://open.spotify.com/embed/playlist/10dLPHRq4w1P97efuM9czI" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
 
-      <div class="videos">
+      <div class="songs">
         <p> Bandas/Artistas </p>
-        <div class="songs_covers" style="background-image: url('img/seether.jpg')"></div>
-        <div class="songs_covers" style="background-image: url('img/postmalone.jpg')"></div>
-        <div class="songs_covers" style="background-image: url('img/jhonmayer.jpg')"></div>
-        <div class="songs_covers" style="background-image: url('img/volbeat.jpg')"></div>
-        <div class="songs_covers" style="background-image: url('img/3doorsdown.jpg')"></div>
+          <a href="https://www.youtube.com/watch?v=-dcmCZGZI7M" target="_blank">
+            <div class="songs_covers" style="background-image: url('img/seether.jpg')"></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=wXhTHyIgQ_U" target="_blank">
+            <div class="songs_covers" style="background-image: url('img/postmalone.jpg')"></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=eXBNx9JL-_w" target="_blank">
+            <div class="songs_covers" style="background-image: url('img/jhonmayer.jpg')"></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=mxxVuDXJtrE" target="_blank">
+            <div class="songs_covers" style="background-image: url('img/volbeat.jpg')"></div>
+          </a>
+          <a href="https://www.youtube.com/watch?v=j7h_b-YA5qM" target="_blank">
+            <div class="songs_covers" style="background-image: url('img/3doorsdown.jpg')"></div>
+          </a>
       </div>
 
     </div>
 
-    <div class="playlist">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ga1m0wjzscU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-    <div class="footer">
+    <div class="footer" style="margin-top: 100px;">
       <a href="https://www.linkedin.com/in/gabriel-orlando-51b276204/" target="_blank">
         <img class="icon" src="img/linkedin.png">
       </a>
