@@ -7,6 +7,7 @@ html,body
   color: #BBC8DE;
   font-family: 'Press Start 2P', cursive;
   font-variant-caps: all-small-caps;
+  scroll-behavior: smooth;
 }
 
 a
@@ -33,26 +34,43 @@ a
 /* Menu superior*/
 .navigation
 {
-  top: 0px;
+  text-align: center;
+  line-height: 70px;
   background-color: #192E41;
-  height: 70px;
   font-size: 15px;
 }
 
 .navigation ul
 {
-  margin-top: 0px;
   list-style: none;
   padding: 0px;
-  height: 70px;
-  text-align: center;
 }
 
-.navigation li
+.navigation ul li
 {
+  position: relative;
   display: inline-block;
-  padding-right: 20px;
-  line-height: 70px;
+}
+
+.dropdown
+{
+  display: none;
+  position: absolute;
+}
+
+.dropdown li
+{
+  width: 120px;
+  line-height: 10px;
+  height: 20px;
+  font-size: 12px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.navigation li:hover ul
+{
+  display: block;
 }
 .navigation li.menu
 {
@@ -127,8 +145,18 @@ a
   width: 30px;
 }
 
+.pipe
+{
+  position: absolute;
+  margin-top: 560px;
+  margin-left: 220px;
+  width: 200px;
+  transform: rotate(270deg);
+}
+
 .cloud
 {
+  pointer-events: none;
   width: 80px;
 }
 
@@ -152,7 +180,7 @@ a
 
 .cloud:nth-of-type(n+1)
 {
-  transform: translate(-1000px,-230px);
+  transform: translate(-800px,-230px);
   animation-name: cloudanimation1;
   animation-duration: 12s;
   animation-iteration-count: infinite;
@@ -161,12 +189,24 @@ a
 
 .cloud:nth-of-type(2n+1)
 {
-  transform: translate(-1000px,-150px);
+  transform: translate(-800px,-150px);
   animation-name: cloudanimation2;
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
+
+.icon
+{
+  width: 40px;
+}
+
+.footer
+{
+  text-align: right;
+  padding: 20px;
+}
+
 
 /* Hobbies */
 
@@ -253,7 +293,7 @@ a
   float: right;
   margin-top: 100px;
   margin-right: 300px;
-  border-radius: 150px;
+  border-radius: 10px;
   width: 250px;
   animation-name: ttanimation;
   animation-duration: 1s;
@@ -312,6 +352,7 @@ a
 /* Exibir os filmes*/
 .movies
 {
+  border-bottom: 4px solid;
   text-align: center;
   display: table;
   animation-name: ttanimation;
@@ -357,6 +398,14 @@ a
 .movies_covers:hover
 {
   filter: blur(2px);
+}
+
+.trailers iframe
+{
+  padding-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
 }
 
 /* Animações página inicial*/
@@ -502,12 +551,12 @@ a
 
 @keyframes cloudanimation1 {
   100%{
-    transform: translate(1200px,-230px);
+    transform: translate(1000px,-230px);
   }
 }
 @keyframes cloudanimation2 {
   100%{
-    transform: translate(1200px,-150px);
+    transform: translate(1000px,-150px);
   }
 }
 
@@ -525,35 +574,13 @@ a
 {
   display: inline-block;
 }
-.name
-{
-  width: 100%;
-}
-
-.divpic
-{
-  width: 100%;
-}
-
-.picture
-{
-  width: 400px;
-  object-fit: cover;
-  text-align: center;
-  margin-top: 100px;
-  margin-left: 80px;
-  border-radius: 600px;
-  animation-name: picanimation;
-  animation-fill-mode: backwards;
-  animation-delay: 4.5s;
-  animation-duration: 3s;
-}
 
 .profilepic
 {
-  float:right;
   margin-top:0px;
-  border-radius: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
   animation-name: cvanimation;
   animation-fill-mode: both;
   animation-duration: 1s;
@@ -563,11 +590,10 @@ a
 @keyframes cvanimation {
   0%{
     opacity: 0;
-    transform: translate(200px,0px);
   }
   100%{
     opacity: 1;
-    transform: translate(250px,0px);
+
   }
 }
 
